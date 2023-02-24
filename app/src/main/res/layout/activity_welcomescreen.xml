@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".welcomescreen">
+
+
+    <TextView
+        android:id="@+id/tvwelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+
+        android:text="Welcome" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="This Data found in our Database"/>
+
+    <TextView
+        android:id="@+id/tvvname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:textSize="15dp"
+        android:textColor="@color/blue"
+        android:gravity="center"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:id="@+id/tvvemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="email"
+        android:textColor="@color/blue"
+        android:gravity="center"
+        android:textSize="15dp"/>
+</LinearLayout>
