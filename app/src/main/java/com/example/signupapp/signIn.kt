@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import java.lang.ref.PhantomReference
@@ -16,16 +17,12 @@ class signIn : AppCompatActivity() {
 
     lateinit var databaseReference : DatabaseReference
 
-    companion object{
-       const val KEY1 = "com.example.signupapp.email"
-        const val KEY2 = "com.example.signupapp.name"
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
         val signbutton = findViewById<Button>(R.id.signInbtn)
-        val username = findViewById<EditText>(R.id.edittextusername)
+        val username = findViewById<TextInputEditText>(R.id.edittextusername)
 
         signbutton.setOnClickListener {
             val usernamestring = username.text.toString()
@@ -46,10 +43,9 @@ class signIn : AppCompatActivity() {
                val email = it.child("etmail").value
                val name = it.child("etname").value
 
-               val intentwelcome = Intent(this,welcomescreen::class.java)
-               intentwelcome.putExtra(KEY1,email.toString())
-               intentwelcome.putExtra(KEY2,name.toString())
-               startActivity(intentwelcome)
+               val openwelcome = Intent(this,welcomescreen::class.java)
+               startActivity(openwelcome)
+
 
            }else{
                Toast.makeText(this,"user doesn't exist please sign up",Toast.LENGTH_LONG).show()

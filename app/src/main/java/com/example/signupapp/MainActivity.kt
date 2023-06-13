@@ -20,15 +20,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       val cardView = findViewById<CardView>(R.id.cardview1)
+
 
         val signupbutton = findViewById<Button>(R.id.signupbtn)
         val name = findViewById<EditText>(R.id.name)
         val email=findViewById<EditText>(R.id.email)
         val password = findViewById<EditText>(R.id.password)
 
-        //cardview background image
-        cardView.setBackgroundResource(R.drawable.backgroundpic);
+
 
 
         signupbutton.setOnClickListener {
@@ -41,6 +40,8 @@ class MainActivity : AppCompatActivity() {
 
             database.child(etname).setValue(user).addOnSuccessListener {
                Toast.makeText(this,"user Registered",Toast.LENGTH_LONG).show()
+
+
             }.addOnSuccessListener {
                 Toast.makeText(this,"Failed",Toast.LENGTH_LONG).show()
             }

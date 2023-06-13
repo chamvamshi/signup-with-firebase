@@ -7,12 +7,15 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/singup"
+        android:icon="@drawable/contactlogo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/singup"
+        android:roundIcon="@drawable/contactlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.SignupApp"
         tools:targetApi="31">
+        <activity
+            android:name=".DetailsActivity"
+            android:exported="false" />
         <activity
             android:name=".welcomescreen"
             android:exported="false" />
